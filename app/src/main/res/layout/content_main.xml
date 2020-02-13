@@ -9,13 +9,12 @@
     tools:showIn="@layout/activity_main">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/output"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
-        android:text="@string/_0"
         android:textAlignment="textEnd"
         android:textSize="24sp"
         android:visibility="visible"
@@ -60,11 +59,12 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
+        android:onClick="onClick"
         android:text="@string/_7"
         app:layout_constraintBottom_toTopOf="@+id/btn4"
         app:layout_constraintEnd_toStartOf="@+id/btn8"
         app:layout_constraintStart_toEndOf="@+id/guidelineLeft"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/output" />
 
     <Button
         android:id="@+id/btn8"
@@ -74,12 +74,13 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
+        android:onClick="onClick"
         android:text="@string/_8"
         app:layout_constraintBottom_toTopOf="@+id/btn5"
         app:layout_constraintEnd_toStartOf="@+id/btn9"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn7"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/output" />
 
     <Button
         android:id="@+id/btn9"
@@ -89,12 +90,13 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
+        android:onClick="onClick"
         android:text="@string/_9"
         app:layout_constraintBottom_toTopOf="@+id/btn6"
         app:layout_constraintEnd_toStartOf="@+id/btnSqrt"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn8"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/output" />
 
     <Button
         android:id="@+id/btnSqrt"
@@ -104,12 +106,13 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
+        android:onClick="onClick"
         android:text="@string/u221a"
         app:layout_constraintBottom_toTopOf="@+id/btnDivide"
         app:layout_constraintEnd_toStartOf="@+id/btnClear"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn9"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/output" />
 
     <Button
         android:id="@+id/btnClear"
@@ -119,13 +122,14 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
+        android:onClick="onClick"
         android:text="@string/c"
         app:layout_constraintBottom_toTopOf="@+id/btnPercent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnSqrt"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/output" />
 
     <Button
         android:id="@+id/btn4"
@@ -135,6 +139,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
+        android:onClick="onClick"
         android:text="@string/_4"
         app:layout_constraintBottom_toTopOf="@+id/btn1"
         app:layout_constraintEnd_toStartOf="@id/btn5"
@@ -150,6 +155,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
+        android:onClick="onClick"
         android:text="@string/_5"
         app:layout_constraintBottom_toTopOf="@+id/btn2"
         app:layout_constraintEnd_toStartOf="@id/btn6"
@@ -165,6 +171,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
+        android:onClick="onClick"
         android:text="@string/_6"
         app:layout_constraintBottom_toTopOf="@+id/btn3"
         app:layout_constraintEnd_toStartOf="@id/btnDivide"
@@ -180,6 +187,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
+        android:onClick="onClick"
         android:text="@string/u00f7"
         app:layout_constraintBottom_toTopOf="@+id/btnMultiply"
         app:layout_constraintEnd_toStartOf="@id/btnPercent"
@@ -195,6 +203,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
+        android:onClick="onClick"
         android:text="@string/percent"
         app:layout_constraintBottom_toTopOf="@+id/btnMinus"
         app:layout_constraintEnd_toEndOf="parent"
@@ -210,6 +219,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
+        android:onClick="onClick"
         android:text="@string/_1"
         app:layout_constraintBottom_toTopOf="@+id/btnSign"
         app:layout_constraintEnd_toStartOf="@+id/btn2"
@@ -225,6 +235,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
+        android:onClick="onClick"
         android:text="@string/_2"
         app:layout_constraintBottom_toTopOf="@+id/btn0"
         app:layout_constraintEnd_toStartOf="@+id/btn3"
@@ -240,6 +251,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
+        android:onClick="onClick"
         android:text="@string/_3"
         app:layout_constraintBottom_toTopOf="@+id/btnDecimal"
         app:layout_constraintEnd_toStartOf="@+id/btnMultiply"
@@ -255,6 +267,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
+        android:onClick="onClick"
         android:text="@string/u00d7"
         app:layout_constraintBottom_toTopOf="@+id/btnPlus"
         app:layout_constraintEnd_toStartOf="@+id/btnMinus"
@@ -270,6 +283,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
+        android:onClick="onClick"
         android:text="@string/minus"
         app:layout_constraintBottom_toTopOf="@+id/btnEquals"
         app:layout_constraintEnd_toEndOf="parent"
@@ -286,6 +300,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
+        android:onClick="onClick"
         android:text="@string/u00b1"
         app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
         app:layout_constraintEnd_toStartOf="@+id/btn0"
@@ -301,6 +316,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
+        android:onClick="onClick"
         android:text="@string/_0"
         app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
         app:layout_constraintEnd_toStartOf="@+id/btnDecimal"
@@ -316,6 +332,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
+        android:onClick="onClick"
         android:text="@string/decimal"
         app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
         app:layout_constraintEnd_toStartOf="@+id/btnPlus"
@@ -331,6 +348,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
+        android:onClick="onClick"
         android:text="@string/plus"
         app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
         app:layout_constraintEnd_toStartOf="@+id/btnEquals"
@@ -346,6 +364,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
+        android:onClick="onClick"
         android:text="@string/equals"
         app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
         app:layout_constraintEnd_toEndOf="parent"
