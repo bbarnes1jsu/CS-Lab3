@@ -59,105 +59,104 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View v){
-        BigDecimal val1;
-        BigDecimal val2;
+        BigDecimal val1 = null;
+        BigDecimal val2 = null;
         String screen;
         String operator;
 
         String buttonText = ((Button) v).getText().toString();
 
-        if(buttonText.equals("btn0")){
-
+        if(buttonText.equals("0")){
+            val1 = BigDecimal.valueOf(0);
             TextView t = (TextView)findViewById(R.id.output);
             t.setText("0");
-
         }
-        else if (buttonText.equals("btn1")){
-
+        else if (buttonText.equals("1")){
+            val1 = BigDecimal.valueOf(1);
             TextView t = (TextView)findViewById(R.id.output);
             t.setText("1");
         }
-        else if (buttonText.equals("btn2")){
-
+        else if (buttonText.equals("2")){
+            val1 = BigDecimal.valueOf(2);
             TextView t = (TextView)findViewById(R.id.output);
             t.setText("2");
         }
-        else if (buttonText.equals("btn3")){
-
+        else if (buttonText.equals("3")){
+            val1 = BigDecimal.valueOf(3);
             TextView t = (TextView)findViewById(R.id.output);
             t.setText("3");
         }
-        else if (buttonText.equals("btn4")){
-
+        else if (buttonText.equals("4")){
+            val1 = BigDecimal.valueOf(4);
             TextView t = (TextView)findViewById(R.id.output);
             t.setText("4");
         }
-        else if (buttonText.equals("btn5")){
-
+        else if (buttonText.equals("5")){
+            val1 = BigDecimal.valueOf(5);
             TextView t = (TextView)findViewById(R.id.output);
             t.setText("5");
         }
-        else if (buttonText.equals("btn6")) {
-
+        else if (buttonText.equals("6")) {
+            val1 = BigDecimal.valueOf(6);
             TextView t = (TextView)findViewById(R.id.output);
             t.setText("6");
         }
-        else if (buttonText.equals("btn7")){
-
+        else if (buttonText.equals("7")){
+            val1 = BigDecimal.valueOf(7);
             TextView t = (TextView)findViewById(R.id.output);
             t.setText("7");
         }
-        else if (buttonText.equals("btn8")){
-
+        else if (buttonText.equals("8")){
+            val1 = BigDecimal.valueOf(8);
             TextView t = (TextView)findViewById(R.id.output);
             t.setText("8");
         }
-        else if (buttonText.equals("btn9")){
-
+        else if (buttonText.equals("9")){
+            val1 = BigDecimal.valueOf(9);
             TextView t = (TextView)findViewById(R.id.output);
             t.setText("9");
         }
-        else if (buttonText.equals("btnSqrt")){
+        else if (buttonText.equals("\u221A")){
             TextView t = (TextView)findViewById(R.id.output);
-            t.setText("\\u221A");
-            BigDec1 = BigDec1.pow(.5);
+            t.setText("\u221A");
+            val1 = val1.pow(1/2);
         }
-        else if (buttonText.equals("btnClear")){
+        else if (buttonText.equals("C")){
             TextView t = (TextView)findViewById(R.id.output);
             t.setText("0");
         }
-        else if (buttonText.equals("btnDivide")){
+        else if (buttonText.equals("\u00F7")){
             TextView t = (TextView)findViewById(R.id.output);
-            t.setText("\\u00F7");
-            BigDec1 = BigDec1.divide(BigDec2);
+            t.setText("\u00F7");
+            val1 = val1.divide(val2);
         }
-        else if (buttonText.equals("btnPercent")){
+        else if (buttonText.equals("%")){
             TextView t = (TextView)findViewById(R.id.output);
             t.setText("%");
         }
-        else if (buttonText.equals("btnMultiply")){
+        else if (buttonText.equals("\u00D7")){
             TextView t = (TextView)findViewById(R.id.output);
-            t.setText("\\u00D7");
-            BigDec1 = BigDec1.multiply(BigDec2);
+            t.setText("\u00D7");
+            val1 = val1.multiply(val2);
         }
-        else if (buttonText.equals("btnMinus")){
+        else if (buttonText.equals("-")){
             TextView t = (TextView)findViewById(R.id.output);
             t.setText("-");
-            BigDec1 = BigDec1.subtract(BigDec2);
+            val1 = val1.subtract(val2);
         }
-        else if (buttonText.equals("btnSign")){
-            BigDec1 = BigDec1.negate();
+        else if (buttonText.equals("\u00b1")){
+            val1 = val1.negate();
         }
-        else if (buttonText.equals("btnDecimal")){
+        else if (buttonText.equals(".")){
             TextView t = (TextView)findViewById(R.id.output);
             t.setText(".");
         }
-        else if (buttonText.equals("btnPlus")){
+        else if (buttonText.equals("+")){
             TextView t = (TextView)findViewById(R.id.output);
             t.setText("+");
-            BigDec1 = BigDec1.add(BigDec2);
+            val1 = val1.add(val2);
         }
-        else if (buttonText.equals("btnEquals")){
+        else if (buttonText.equals("=")){
 
         }
     }

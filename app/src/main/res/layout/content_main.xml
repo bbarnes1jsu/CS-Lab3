@@ -15,13 +15,15 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
-        android:textAlignment="textEnd"
+        android:textAlignment="viewEnd"
         android:textSize="24sp"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@id/btn8"
         app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
         app:layout_constraintStart_toEndOf="@+id/guidelineLeft"
-        app:layout_constraintTop_toBottomOf="@+id/guidelineTop" />
+        app:layout_constraintTop_toBottomOf="@+id/guidelineTop"
+        tools:text="@string/_0"
+        tools:visibility="visible" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineTop"
