@@ -17,7 +17,13 @@ import android.widget.*;
 import java.math.BigDecimal;
 
 public class MainActivity extends AppCompatActivity {
+    String screen = "";
+    String operator = "";
+    String right = "";
+    String left = "";
 
+    BigDecimal val1 = null;
+    BigDecimal val2 = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,11 +64,19 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void calculate(){
+
+    }
+    public void resetCalculator(View v){
+        TextView output = (TextView) findViewById(R.id.output);
+        output.setText("");
+        left = "";
+        right = "";
+    }
+
     public void onClick(View v){
-        BigDecimal val1 = null;
-        BigDecimal val2 = null;
-        String screen = "";
-        String operator = "";
+
+
 
         String buttonText = ((Button) v).getText().toString();
 
@@ -133,8 +147,7 @@ public class MainActivity extends AppCompatActivity {
             t.append(screen);
         }
         else if (buttonText.equals("C")){
-            TextView t = (TextView)findViewById(R.id.output);
-            t.setText("0");
+           resetCalculator(View v);
         }
         else if (buttonText.equals("\u00F7")){
             TextView t = (TextView)findViewById(R.id.output);
@@ -146,6 +159,8 @@ public class MainActivity extends AppCompatActivity {
             TextView t = (TextView)findViewById(R.id.output);
             t.setText("%");
             t.append(screen);
+            double current= ;
+            double squareRoot= ;
         }
         else if (buttonText.equals("\u00D7")){
             TextView t = (TextView)findViewById(R.id.output);
