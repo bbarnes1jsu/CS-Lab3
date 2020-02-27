@@ -21,9 +21,14 @@ public class MainActivity extends AppCompatActivity {
     String operator = "";
     String right = "";
     String left = "";
+    String saveOperator = "";
 
-    BigDecimal val1 = null;
-    BigDecimal val2 = null;
+    BigDecimal val1 = new BigDecimal(left);
+    BigDecimal val2 = new BigDecimal(right);
+    BigDecimal result = new BigDecimal(0);
+
+    Boolean noText = false;
+    Boolean rightFlag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,79 +71,161 @@ public class MainActivity extends AppCompatActivity {
 
     public void calculate(){
 
+        TextView output = (TextView) findViewById(R.id.output);
+
+        if(operator.equals("=")){
+            if(saveOperator.equals("-")){
+                result = val1.subtract(val2);
+            }
+            else if(saveOperator.equals("+")){
+                result = val1.add(val2);
+            }
+            else if(saveOperator.equals("\u00D7")){
+                result = val1.multiply(val2);
+            }
+            else if(saveOperator.equals("\u00F7")){
+                result = val1.divide(val2);
+            }
+            else if(saveOperator.equals("%")){
+                result = val1.remainder(val2);
+            }
+        }
+        else{
+            if(saveOperator.equals("-")){
+                result = val1.subtract(val2);
+            }
+            else if(saveOperator.equals("+")){
+                result = val1.add(val2);
+            }
+            else if(saveOperator.equals("\u00D7")){
+                result = val1.multiply(val2);
+            }
+            else if(saveOperator.equals("\u00F7")){
+                result = val1.divide(val2);
+            }
+            else if(saveOperator.equals("%")){
+                result = val1.remainder(val2);
+            }
+            noText = true;
+        }
+        output.setText(result.toString());
+        left = result.toString();
+        right = "";
+        rightFlag = false;
     }
     public void resetCalculator(View v){
         TextView output = (TextView) findViewById(R.id.output);
         output.setText("");
         left = "";
         right = "";
+        rightFlag = false;
     }
 
     public void onClick(View v){
 
-
-
         String buttonText = ((Button) v).getText().toString();
 
+        TextView output = (TextView) findViewById(R.id.output);
+
         if(buttonText.equals("0")){
-            val1 = BigDecimal.valueOf(0);
-            TextView t = (TextView)findViewById(R.id.output);
-            t.setText("0");
-            t.append(screen);
+            if(noText){
+                left = output.getText().toString();
+                output.setText(left);
+                rightFlag = true;
+            }
+            else{
+                output.setText(output.getText()+buttonText);
+            }
         }
         else if (buttonText.equals("1")){
-            val1 = BigDecimal.valueOf(1);
-            TextView t = (TextView)findViewById(R.id.output);
-            t.setText("1");
-            t.append(screen);
+            if(noText){
+                left = output.getText().toString();
+                output.setText(left);
+                rightFlag = true;
+            }
+            else{
+                output.setText(output.getText()+buttonText);
+            }
         }
         else if (buttonText.equals("2")){
-            val1 = BigDecimal.valueOf(2);
-            TextView t = (TextView)findViewById(R.id.output);
-            t.setText("2");
-            t.append(screen);
+            if(noText){
+                left = output.getText().toString();
+                output.setText(left);
+                rightFlag = true;
+            }
+            else{
+                output.setText(output.getText()+buttonText);
+            }
         }
         else if (buttonText.equals("3")){
-            val1 = BigDecimal.valueOf(3);
-            TextView t = (TextView)findViewById(R.id.output);
-            t.setText("3");
-            t.append(screen);
+            if(noText){
+                left = output.getText().toString();
+                output.setText(left);
+                rightFlag = true;
+            }
+            else{
+                output.setText(output.getText()+buttonText);
+            }
         }
         else if (buttonText.equals("4")){
-            val1 = BigDecimal.valueOf(4);
-            TextView t = (TextView)findViewById(R.id.output);
-            t.setText("4");
-            t.append(screen);
+            if(noText){
+                left = output.getText().toString();
+                output.setText(left);
+                rightFlag = true;
+            }
+            else{
+                output.setText(output.getText()+buttonText);
+            }
         }
         else if (buttonText.equals("5")){
-            val1 = BigDecimal.valueOf(5);
-            TextView t = (TextView)findViewById(R.id.output);
-            t.setText("5");
-            t.append(screen);
+            if(noText){
+                left = output.getText().toString();
+                output.setText(left);
+                rightFlag = true;
+            }
+            else{
+                output.setText(output.getText()+buttonText);
+            }
         }
         else if (buttonText.equals("6")) {
-            val1 = BigDecimal.valueOf(6);
-            TextView t = (TextView)findViewById(R.id.output);
-            t.setText("6");
-            t.append(screen);
+            if(noText){
+                left = output.getText().toString();
+                output.setText(left);
+                rightFlag = true;
+            }
+            else{
+                output.setText(output.getText()+buttonText);
+            }
         }
         else if (buttonText.equals("7")){
-            val1 = BigDecimal.valueOf(7);
-            TextView t = (TextView)findViewById(R.id.output);
-            t.setText("7");
-            t.append(screen);
+            if(noText){
+                left = output.getText().toString();
+                output.setText(left);
+                rightFlag = true;
+            }
+            else{
+                output.setText(output.getText()+buttonText);
+            }
         }
         else if (buttonText.equals("8")){
-            val1 = BigDecimal.valueOf(8);
-            TextView t = (TextView)findViewById(R.id.output);
-            t.setText("8");
-            t.append(screen);
+            if(noText){
+                left = output.getText().toString();
+                output.setText(left);
+                rightFlag = true;
+            }
+            else{
+                output.setText(output.getText()+buttonText);
+            }
         }
         else if (buttonText.equals("9")){
-            val1 = BigDecimal.valueOf(9);
-            TextView t = (TextView)findViewById(R.id.output);
-            t.setText("9");
-            t.append(screen);
+            if(noText){
+                left = output.getText().toString();
+                output.setText(left);
+                rightFlag = true;
+            }
+            else{
+                output.setText(output.getText()+buttonText);
+            }
         }
         else if (buttonText.equals("\u221A")){
             TextView t = (TextView)findViewById(R.id.output);
@@ -146,50 +233,95 @@ public class MainActivity extends AppCompatActivity {
             val1 = val1.pow(1/2);
             t.append(screen);
         }
-        else if (buttonText.equals("C")){
-           resetCalculator(View v);
-        }
         else if (buttonText.equals("\u00F7")){
-            TextView t = (TextView)findViewById(R.id.output);
-            t.setText("\u00F7");
-            val1 = val1.divide(val2);
-            t.append(screen);
+
+            if(rightFlag == false){
+                operator = buttonText;
+                saveOperator = operator;
+                left = output.getText().toString();
+                output.setText("");
+                rightFlag = true;
+            }
+            else{
+                right = output.getText().toString();
+                calculate();
+            }
         }
         else if (buttonText.equals("%")){
-            TextView t = (TextView)findViewById(R.id.output);
-            t.setText("%");
-            t.append(screen);
-            double current= ;
-            double squareRoot= ;
+            if(rightFlag == false){
+                operator = buttonText;
+                saveOperator = operator;
+                left = output.getText().toString();
+                output.setText("");
+                rightFlag = true;
+            }
+            else{
+                right = output.getText().toString();
+                calculate();
+            }
         }
         else if (buttonText.equals("\u00D7")){
-            TextView t = (TextView)findViewById(R.id.output);
-            t.setText("\u00D7");
-            val1 = val1.multiply(val2);
-            t.append(screen);
+            if(rightFlag == false){
+                operator = buttonText;
+                saveOperator = operator;
+                left = output.getText().toString();
+                output.setText("");
+                rightFlag = true;
+            }
+            else{
+                right = output.getText().toString();
+                calculate();
+            }
         }
         else if (buttonText.equals("-")){
-            TextView t = (TextView)findViewById(R.id.output);
-            t.setText("-");
-            val1 = val1.subtract(val2);
-            t.append(screen);
+
+            if(rightFlag == false){
+                operator = buttonText;
+                saveOperator = operator;
+                left = output.getText().toString();
+                output.setText("");
+                rightFlag = true;
+            }
+            else{
+                right = output.getText().toString();
+                calculate();
+            }
         }
         else if (buttonText.equals("\u00b1")){
-            val1 = val1.negate();
+            if(noText){
+                val1 = val1.negate();
+            }
+            else{
+                val2 = val2.negate();
+            }
         }
         else if (buttonText.equals(".")){
-            TextView t = (TextView)findViewById(R.id.output);
-            t.setText(".");
-            t.append(screen);
+            if(noText){
+                left = output.getText().toString();
+                output.setText(left);
+                rightFlag = true;
+            }
+            else{
+                output.setText(output.getText()+buttonText);
+            }
         }
         else if (buttonText.equals("+")){
-            TextView t = (TextView)findViewById(R.id.output);
-            t.setText("+");
-            val1 = val1.add(val2);
-            t.append(screen);
+
+            if(rightFlag == false){
+                operator = buttonText;
+                saveOperator = operator;
+                left = output.getText().toString();
+                output.setText("");
+                rightFlag = true;
+            }
+            else{
+                right = output.getText().toString();
+                calculate();
+            }
         }
         else if (buttonText.equals("=")){
-
+            operator = buttonText;
+            calculate();
         }
     }
 }
